@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Social Sharing Buttons with Shared Count</title>
+  <meta name="description" content="Social share buttons with shared count. Built with Sass and jQuery">
+  <meta name="author" content="Carson Shold">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="social share buttons, sass, jquery">
+  <meta name="og:description" content="Social share buttons with shared count. Built with Sass and jQuery">
+  <meta name="og:url" content="http://labs.carsonshold.com/social-sharing-buttons">
+  <meta name="og:image" content="https://camo.githubusercontent.com/9825ce2ed45025b690ef9a7d7083d2241977da9e/687474703a2f2f6c6162732e636172736f6e73686f6c642e636f6d2f66622d70686f746f2d73656c6563746f722f64656d6f2e706e67">
+  <meta name="og:type" content="website">
+  <meta name="og:site_name" content="Social Sharing Buttons with Shared Count">
+  <link rel="stylesheet" href="social-buttons.css">
+  <link rel="stylesheet" href="http://labs.carsonshold.com/demos.css">
+</head>
+<body>
+
+  <a href="http://carsonshold.com" class="carsonshold"><img src="http://carsonshold.com/wp-content/themes/carsonshold/img/carson-shold.png" alt="Carson Shold" /></a>
+
+  <h1>Social Sharing Buttons</h1>
+
+  <a href="https://github.com/cshold/social-sharing-buttons" title="View on GitHub" class="github-button">Get the source on GitHub</a>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Icon font</li>
+    <li>Ajax requests for number of times shared</li>
+    <li>Built with Sass, exported to CSS</li>
+  </ul>
+
+  <h3>Default Buttons</h3>
+  <div class="social-sharing" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
+
+    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+    <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
+      <span class="icon icon-facebook"></span>
+      <span class="share-title">Share</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!-- https://dev.twitter.com/docs/intents -->
+    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-twitter">
+      <span class="icon icon-twitter"></span>
+      <span class="share-title">Tweet</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!--
+      https://developers.pinterest.com/pin_it/
+      Pinterest get data from the same Open Graph meta tags Facebook uses
+    -->
+    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://labs.carsonshold.com/social-sharing-buttons&amp;media=http://photos-c.ak.instagram.com/hphotos-ak-xfp1/10369404_682591538475746_1724734234_n.jpg&amp;description=Tina%20the%20dachsund" class="share-pinterest">
+      <span class="icon icon-pinterest"></span>
+      <span class="share-title">Pin it</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!-- https://developers.google.com/+/web/share/ -->
+    <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
+      <!-- Cannot get Google+ share count with JS yet -->
+      <span class="icon icon-google"></span>
+      <span class="share-count">+1</span>
+    </a>
+
+    <!-- http://fancy.com/help/button -->
+    <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL=http://labs.carsonshold.com/social-sharing-buttons&amp;Title=Tina%20the%20dachsund&amp;Category=Other&amp;ImageURL=http://distilleryimage3.ak.instagram.com/6477684ac48d11e19ab222000a1e8819_7.jpg" class="share-fancy">
+      <span class="icon icon-fancy"></span>
+      <span class="share-title">Fancy</span>
+    </a>
+
+  </div>
+
+  <h3>Large Buttons</h3>
+  <div class="social-sharing" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
+
+    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
+    <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook is-large">
+      <span class="icon icon-facebook"></span>
+      <span class="share-title">Share</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!-- https://dev.twitter.com/docs/intents -->
+    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-twitter is-large">
+      <span class="icon icon-twitter"></span>
+      <span class="share-title">Tweet</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!--
+      https://developers.pinterest.com/pin_it/
+      Pinterest get data from the same Open Graph meta tags Facebook uses
+    -->
+    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://labs.carsonshold.com/social-sharing-buttons&amp;media=http://photos-c.ak.instagram.com/hphotos-ak-xfp1/10369404_682591538475746_1724734234_n.jpg&amp;description=Tina%20the%20dachsund" class="share-pinterest is-large">
+      <span class="icon icon-pinterest"></span>
+      <span class="share-title">Pin it</span>
+      <span class="share-count">0</span>
+    </a>
+
+    <!-- https://developers.google.com/+/web/share/ -->
+    <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google is-large">
+      <!-- Cannot get Google+ share count with JS yet -->
+      <span class="icon icon-google"></span>
+      <span class="share-count">+1</span>
+    </a>
+
+    <!-- http://fancy.com/help/button -->
+    <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL=http://labs.carsonshold.com/social-sharing-buttons&amp;Title=Tina%20the%20dachsund&amp;Category=Other&amp;ImageURL=http://distilleryimage3.ak.instagram.com/6477684ac48d11e19ab222000a1e8819_7.jpg" class="share-fancy is-large">
+      <span class="icon icon-fancy"></span>
+      <span class="share-title">Fancy</span>
+    </a>
+
+  </div>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>Google+ doesn't let you get the number of shared with JavaScript. <a href="http://www.aljtmedia.com/blog/getting-your-social-share-counts-with-php/" target="_blank">Try PHP</a>.</li>
+    <li>Fancy does not have a way to get number of shares</li>
+  </ul>
+
+  <footer class="demo-footer">
+    Author: Carson Shold | <a href="https://twitter.com/cshold" title="Carson Shold on Twitter">@cshold</a>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="social-buttons.js"></script>
+  <script>
+    // These analytics are here for the page at http://labs.carsonshold.com/social-share-buttons/
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8697235-1']);
+    _gaq.push(['_setDomainName', 'carsonshold.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;g.src="//www.google-analytics.com/ga.js";s.parentNode.insertBefore(g,s);}(document,"script"));
+  </script>
+</body>
+</html>
