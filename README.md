@@ -1,6 +1,8 @@
 jQuery Social Sharing Buttons
 =========================================
 
+[View Demo](http://labs.carsonshold.com/social-sharing-buttons/)
+
 Simple social sharing buttons with shared count ajax lookups.
 
 ![This is what they look like.](http://labs.carsonshold.com/social-sharing-buttons/demo.png)
