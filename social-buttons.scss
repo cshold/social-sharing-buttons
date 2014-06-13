@@ -66,6 +66,10 @@ $shareCountBg: #fff;
     line-height: $shareButtonHeight;
     text-decoration: none;
     font-weight: normal;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   span {

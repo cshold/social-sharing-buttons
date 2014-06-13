@@ -55,6 +55,8 @@
     line-height: 22px;
     text-decoration: none;
     font-weight: normal; }
+    .social-sharing a:hover {
+      color: #fff; }
   .social-sharing span {
     display: inline-block;
     vertical-align: top;
