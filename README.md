@@ -23,4 +23,12 @@ Simple social sharing buttons with shared count ajax lookups.
 </a>
 ```
 
-Add class `is-large` to get the larger version of the button
+### Button Styles
+- Add class `is-large` to the surrounding `.social-sharing` div for large buttons.
+- Add class `is-clean` to the surrounding `.social-sharing` div for clean buttons.
+- Remove `.share-count` for a minimal button.
+
+### Update Sass
+```
+sass --watch social-buttons.scss:social-buttons.css
+```
