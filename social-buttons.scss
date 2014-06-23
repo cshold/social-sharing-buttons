@@ -85,7 +85,7 @@ $shareCountBg: #fff;
   }
 
   /*================ Large Buttons ================*/
-  a.is-large {
+  &.is-large a {
     height: $shareButtonHeight*2;
     line-height: $shareButtonHeight*2;
 
@@ -182,7 +182,7 @@ $shareCountBg: #fff;
     border-right: 6px solid $shareCountBg;
   }
 
-  [class^="share-"]:hover & {
+  a:hover & {
     background-color: darken($shareCountBg, 5%);
 
     &:before {
@@ -195,4 +195,61 @@ $shareCountBg: #fff;
     padding: 0 14px;
   }
 
+}
+
+/*================ Clean Buttons ================*/
+.social-sharing.is-clean {
+  a {
+    background-color: #f6f6f6;
+    border: 1px solid darken(#f6f6f6, 5%);
+    color: #333;
+    height: $shareButtonHeight*1.5;
+    line-height: $shareButtonHeight*1.5;
+
+    span {
+      height: $shareButtonHeight*1.5;
+      line-height: $shareButtonHeight*1.5;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: darken(#f6f6f6, 2%);
+    }
+
+    .share-title {
+      font-weight: normal;
+    }
+
+    &:hover .share-count {
+      background-color: $shareCountBg;
+
+      &:before {
+        border-right-color: $shareCountBg;
+      }
+    }
+  }
+
+  .share-count {
+    top: -1px;
+  }
+
+  .icon-facebook {
+    color: #3b5998;
+  }
+
+  .icon-twitter {
+    color: #00aced;
+  }
+
+  .icon-pinterest {
+    color: #cb2027;
+  }
+
+  .icon-fancy {
+    color: #4999dc;
+  }
+
+  .icon-google {
+    color: #dd4b39;
+  }
 }
