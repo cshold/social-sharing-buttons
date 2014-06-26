@@ -82,6 +82,10 @@ $shareCountBg: #fff;
 
   .icon {
     padding: 0 5px 0 10px;
+
+    &:before {
+      line-height: $shareButtonHeight;
+    }
   }
 
   /*================ Large Buttons ================*/
@@ -97,6 +101,10 @@ $shareCountBg: #fff;
 
     .icon {
       padding: 0 10px 0 18px;
+
+      &:before {
+        line-height: $shareButtonHeight*2;
+      }
     }
   }
 }
