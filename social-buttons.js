@@ -64,10 +64,9 @@ CSbuttons.socialSharing = function () {
 
   // Share popups
   shareLinks.on('click', function(e) {
-    console.log('test');
     e.preventDefault();
     var el = $(this),
-        popup = el.attr('class'),
+        popup = el.attr('class').replace('-','_'),
         link = el.attr('href'),
         w = 700,
         h = 400;
