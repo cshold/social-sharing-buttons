@@ -46,7 +46,9 @@
 
 /*================ Social share buttons ================*/
 $shareButtonHeight: 22px;
+$shareButtonCleanHeight: 30px;
 $shareCountBg: #fff;
+$shareBorderColor: #ececec;
 
 .social-sharing {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -168,7 +170,7 @@ $shareCountBg: #fff;
   line-height: $shareButtonHeight - 2;
   color: #333;
   border-radius: 0 2px 2px 0;
-  border: 1px solid #ececec;
+  border: 1px solid $shareBorderColor;
   opacity: 0;
   @include transition(opacity 0.2s ease-in);
 
@@ -176,25 +178,35 @@ $shareCountBg: #fff;
     opacity: 1;
   }
 
-  &:before {
+  &:before,
+  &:after {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
-    left: -5px;
     margin-top: -6px;
     width: 0;
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 6px solid $shareCountBg;
+    border-right: 6px solid;
+  }
+
+  &:before {
+    left: -6px;
+    border-right-color: $shareBorderColor;
+  }
+
+  &:after {
+    left: -5px;
+    border-right-color: $shareCountBg;
   }
 
   a:hover & {
-    background-color: darken($shareCountBg, 5%);
+    background-color: darken($shareCountBg, 4%);
 
-    &:before {
-      border-right-color: darken($shareCountBg, 5%);
+    &:after {
+      border-right-color: darken($shareCountBg, 4%);
     }
   }
 
@@ -208,32 +220,32 @@ $shareCountBg: #fff;
 /*================ Clean Buttons ================*/
 .social-sharing.is-clean {
   a {
-    background-color: #f6f6f6;
-    border: 1px solid darken(#f6f6f6, 5%);
+    background-color: #fff;
+    border: 1px solid $shareBorderColor;
     color: #333;
-    height: $shareButtonHeight*1.5;
-    line-height: $shareButtonHeight*1.5;
+    height: $shareButtonCleanHeight;
+    line-height: $shareButtonCleanHeight;
 
     span {
-      height: $shareButtonHeight*1.5;
-      line-height: $shareButtonHeight*1.5;
-      font-size: 14px;
+      height: $shareButtonCleanHeight;
+      line-height: $shareButtonCleanHeight;
+      font-size: 13px;
     }
 
     &:hover {
-      background-color: darken(#f6f6f6, 2%);
-    }
-
-    .share-title {
-      font-weight: normal;
+      background-color: $shareBorderColor;
     }
 
     &:hover .share-count {
       background-color: $shareCountBg;
 
-      &:before {
+      &:after {
         border-right-color: $shareCountBg;
       }
+    }
+
+    .share-title {
+      font-weight: normal;
     }
   }
 

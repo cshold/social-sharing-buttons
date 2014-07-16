@@ -25,30 +25,35 @@ CSbuttons.socialSharing = function () {
   var fbLink = $('.share-facebook'),
       twitLink = $('.share-twitter'),
       pinLink = $('.share-pinterest'),
-      googleLink = $('.share-google'),
-      fbShares, twitShares, pinShares, googleShares;
+      googleLink = $('.share-google');
 
   if ( fbLink.length ) {
     $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?', function(data) {
-      fbShares = data.shares;
-      if (!fbShares) {
-        fbShares = 0;
+      if (data.shares) {
+        fbLink.find('.share-count').text(data.shares).addClass('is-loaded');
+      } else {
+        fbLink.find('.share-count').remove();
       }
-      fbLink.find('.share-count').text(fbShares).addClass('is-loaded');
     });
   };
 
   if ( twitLink.length ) {
     $.getJSON('https://cdn.api.twitter.com/1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
-      twitShares = data.count;
-      twitLink.find('.share-count').text(twitShares).addClass('is-loaded');
+      if (data.count > 0) {
+        twitLink.find('.share-count').text(data.count).addClass('is-loaded');
+      } else {
+        twitLink.find('.share-count').remove();
+      }
     });
   };
 
   if ( pinLink.length ) {
     $.getJSON('https://api.pinterest.com/v1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
-      pinShares = data.count;
-      pinLink.find('.share-count').text(pinShares).addClass('is-loaded');
+      if (data.count > 0) {
+        pinLink.find('.share-count').text(pinShares).addClass('is-loaded');
+      } else {
+        pinLink.find('.share-count').remove();
+      }
     });
   };
 
