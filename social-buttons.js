@@ -7,9 +7,11 @@
 ==============================================================================*/
 window.CSbuttons = window.CSbuttons || {};
 
-CSbuttons.cache = {
-  shareButtons: $('.social-sharing')
-}
+$(function() {
+  CSbuttons.cache = {
+    shareButtons: $('.social-sharing')
+  }
+});
 
 CSbuttons.init = function () {
   CSbuttons.socialSharing();
@@ -50,7 +52,7 @@ CSbuttons.socialSharing = function () {
   if ( pinLink.length ) {
     $.getJSON('https://api.pinterest.com/v1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
       if (data.count > 0) {
-        pinLink.find('.share-count').text(pinShares).addClass('is-loaded');
+        pinLink.find('.share-count').text(data.count).addClass('is-loaded');
       } else {
         pinLink.find('.share-count').remove();
       }
