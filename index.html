@@ -241,11 +241,20 @@
   </ul>
 
   <footer class="demo-footer">
-    Author: Carson Shold | <a href="https://twitter.com/cshold" title="Carson Shold on Twitter">@cshold</a>
+    <p>Author: Carson Shold | <a href="https://twitter.com/cshold" title="Carson Shold on Twitter">@cshold</a></p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="4UU7LKJYTU4UC">
+      <input type="submit" name="submit" value="Buy me a beer" class="text-link">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
   </footer>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="social-buttons.js"></script>
+
+  <!-- Don't use this code in your pages -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>
     // These analytics are here for the page at http://labs.carsonshold.com/social-share-buttons/
     var _gaq = _gaq || [];
