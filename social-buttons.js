@@ -29,33 +29,45 @@ CSbuttons.socialSharing = function () {
       $googleLink = $('.share-google');
 
   if ( $fbLink.length ) {
-    $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?', function(data) {
-      if (data.shares) {
-        $fbLink.find('.share-count').text(data.shares).addClass('is-loaded');
-      } else {
+    $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?')
+      .done(function(data) {
+        if (data.shares) {
+          $fbLink.find('.share-count').text(data.shares).addClass('is-loaded');
+        } else {
+          $fbLink.find('.share-count').remove();
+        }
+      })
+      .fail(function(data) {
         $fbLink.find('.share-count').remove();
-      }
-    });
+      });
   };
 
   if ( $twitLink.length ) {
-    $.getJSON('https://cdn.api.twitter.com/1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
-      if (data.count > 0) {
-        $twitLink.find('.share-count').text(data.count).addClass('is-loaded');
-      } else {
+    $.getJSON('https://cdn.api.twitter.com/1/urls/count.json?url=' + permalink + '&callback=?')
+      .done(function(data) {
+        if (data.count > 0) {
+          $twitLink.find('.share-count').text(data.count).addClass('is-loaded');
+        } else {
+          $twitLink.find('.share-count').remove();
+        }
+      })
+      .fail(function(data) {
         $twitLink.find('.share-count').remove();
-      }
-    });
+      });
   };
 
   if ( $pinLink.length ) {
-    $.getJSON('https://api.pinterest.com/v1/urls/count.json?url=' + permalink + '&callback=?', function(data) {
-      if (data.count > 0) {
-        $pinLink.find('.share-count').text(data.count).addClass('is-loaded');
-      } else {
+    $.getJSON('https://api.pinterest.com/v1/urls/count.json?url=' + permalink + '&callback=?')
+      .done(function(data) {
+        if (data.count > 0) {
+          $pinLink.find('.share-count').text(data.count).addClass('is-loaded');
+        } else {
+          $pinLink.find('.share-count').remove();
+        }
+      })
+      .fail(function(data) {
         $pinLink.find('.share-count').remove();
-      }
-    });
+      });
   };
 
   if ( $googleLink.length ) {
