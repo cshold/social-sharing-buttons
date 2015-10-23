@@ -77,7 +77,7 @@ CSbuttons.socialSharing = function () {
   }
 
   if ( $redditLink.length ) {
-    // Can't currently get Google+ count with JS, so just pretend it loaded
+    // Can't currently get reddit count with JS, so just pretend it loaded
     $redditLink.find('.share-count').addClass('is-loaded');
   }
 
