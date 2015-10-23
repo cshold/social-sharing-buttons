@@ -26,7 +26,8 @@ CSbuttons.socialSharing = function () {
   var $fbLink = $('.share-facebook'),
       $twitLink = $('.share-twitter'),
       $pinLink = $('.share-pinterest'),
-      $googleLink = $('.share-google');
+      $googleLink = $('.share-google'),
+      $redditLink = $('.share-reddit');
 
   if ( $fbLink.length ) {
     $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?')
@@ -75,9 +76,13 @@ CSbuttons.socialSharing = function () {
     $googleLink.find('.share-count').addClass('is-loaded');
   }
 
+  if ( $redditLink.length ) {
+    // Can't currently get Google+ count with JS, so just pretend it loaded
+    $redditLink.find('.share-count').addClass('is-loaded');
+  }
+
   // Share popups
   $shareLinks.on('click', function(e) {
-    e.preventDefault();
     var el = $(this),
         popup = el.attr('class').replace('-','_'),
         link = el.attr('href'),
@@ -86,19 +91,25 @@ CSbuttons.socialSharing = function () {
 
     // Set popup sizes
     switch (popup) {
-      case 'share-twitter':
+      case 'share_twitter':
         h = 300;
         break;
-      case 'share-fancy':
+      case 'share_fancy':
         w = 480;
         h = 720;
         break;
-      case 'share-google':
+      case 'share_google':
         w = 500;
+        break;
+      case 'share_reddit':
+        popup = false;
         break;
     }
 
-    window.open(link, popup, 'width=' + w + ', height=' + h);
+    if (popup) {
+        e.preventDefault();
+        window.open(link, popup, 'width=' + w + ', height=' + h);
+    }
   });
 }
 
