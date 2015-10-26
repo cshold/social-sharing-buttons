@@ -27,7 +27,8 @@ CSbuttons.socialSharing = function () {
       $twitLink = $('.share-twitter'),
       $pinLink = $('.share-pinterest'),
       $googleLink = $('.share-google'),
-      $redditLink = $('.share-reddit');
+      $redditLink = $('.share-reddit'),
+      $linkedinLink = $('.share-linkedin');
 
   if ( $fbLink.length ) {
     $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?')
@@ -80,6 +81,20 @@ CSbuttons.socialSharing = function () {
     // Can't currently get reddit count with JS, so just pretend it loaded
     $redditLink.find('.share-count').addClass('is-loaded');
   }
+
+  if ( $linkedinLink.length ) {
+    $.getJSON('http://www.linkedin.com/countserv/count/share?url=' + permalink + '&callback=?')
+      .done(function(data) {
+        if (data.count > 0) {
+          $linkedinLink.find('.share-count').text(data.count).addClass('is-loaded');
+        } else {
+          $linkedinLink.find('.share-count').remove();
+        }
+      })
+      .fail(function(data) {
+        $linkedinLink.find('.share-count').remove();
+      });
+  };
 
   // Share popups
   $shareLinks.on('click', function(e) {

@@ -7,8 +7,8 @@
 ==============================================================================*/
 @font-face {
   font-family: 'icons';
-  src: url("fonts/icons.eot?2l8mez");
-  src: url("fonts/icons.eot?2l8mez#iefix") format("embedded-opentype"), url("fonts/icons.ttf?2l8mez") format("truetype"), url("fonts/icons.woff?2l8mez") format("woff"), url("fonts/icons.svg?2l8mez#icomoon") format("svg");
+  src: url("fonts/icons.eot?os9m87");
+  src: url("fonts/icons.eot?os9m87#iefix") format("embedded-opentype"), url("fonts/icons.ttf?os9m87") format("truetype"), url("fonts/icons.woff?os9m87") format("woff"), url("fonts/icons.svg?os9m87#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -48,6 +48,10 @@
 
 .icon-reddit:before {
   content: "\52";
+}
+
+.icon-linkedin:before {
+  content: "\69";
 }
 
 /*================ Social share buttons ================*/
@@ -170,6 +174,14 @@
   background-color: #3a80c1;
 }
 
+.share-linkedin {
+  background-color: #0077b5;
+}
+
+.share-linkedin:hover {
+  background-color: #005582;
+}
+
 .share-count {
   position: relative;
   background-color: #fff;
@@ -285,4 +297,8 @@ a:hover .share-count:after {
 
 .social-sharing.is-clean .icon-reddit {
   color: #5f99cf;
+}
+
+.social-sharing.is-clean .icon-linkedin {
+  color: #0077b5;
 }
