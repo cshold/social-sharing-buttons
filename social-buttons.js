@@ -26,7 +26,9 @@ CSbuttons.socialSharing = function () {
   var $fbLink = $('.share-facebook'),
       $twitLink = $('.share-twitter'),
       $pinLink = $('.share-pinterest'),
-      $googleLink = $('.share-google');
+      $googleLink = $('.share-google'),
+      $redditLink = $('.share-reddit'),
+      $linkedinLink = $('.share-linkedin');
 
   if ( $fbLink.length ) {
     $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?')
@@ -75,9 +77,27 @@ CSbuttons.socialSharing = function () {
     $googleLink.find('.share-count').addClass('is-loaded');
   }
 
+  if ( $redditLink.length ) {
+    // Can't currently get reddit count with JS, so just pretend it loaded
+    $redditLink.find('.share-count').addClass('is-loaded');
+  }
+
+  if ( $linkedinLink.length ) {
+    $.getJSON('http://www.linkedin.com/countserv/count/share?url=' + permalink + '&callback=?')
+      .done(function(data) {
+        if (data.count > 0) {
+          $linkedinLink.find('.share-count').text(data.count).addClass('is-loaded');
+        } else {
+          $linkedinLink.find('.share-count').remove();
+        }
+      })
+      .fail(function(data) {
+        $linkedinLink.find('.share-count').remove();
+      });
+  };
+
   // Share popups
   $shareLinks.on('click', function(e) {
-    e.preventDefault();
     var el = $(this),
         popup = el.attr('class').replace('-','_'),
         link = el.attr('href'),
@@ -86,19 +106,25 @@ CSbuttons.socialSharing = function () {
 
     // Set popup sizes
     switch (popup) {
-      case 'share-twitter':
+      case 'share_twitter':
         h = 300;
         break;
-      case 'share-fancy':
+      case 'share_fancy':
         w = 480;
         h = 720;
         break;
-      case 'share-google':
+      case 'share_google':
         w = 500;
+        break;
+      case 'share_reddit':
+        popup = false;
         break;
     }
 
-    window.open(link, popup, 'width=' + w + ', height=' + h);
+    if (popup) {
+        e.preventDefault();
+        window.open(link, popup, 'width=' + w + ', height=' + h);
+    }
   });
 }
 
