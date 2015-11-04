@@ -7,8 +7,8 @@
 ==============================================================================*/
 @font-face {
   font-family: 'icons';
-  src: url("fonts/icons.eot?os9m87");
-  src: url("fonts/icons.eot?os9m87#iefix") format("embedded-opentype"), url("fonts/icons.ttf?os9m87") format("truetype"), url("fonts/icons.woff?os9m87") format("woff"), url("fonts/icons.svg?os9m87#icons") format("svg");
+  src: url("fonts/icons.eot?qhrhpx");
+  src: url("fonts/icons.eot?qhrhpx#iefix") format("embedded-opentype"), url("fonts/icons.ttf?qhrhpx") format("truetype"), url("fonts/icons.woff?qhrhpx") format("woff"), url("fonts/icons.svg?qhrhpx#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -52,6 +52,10 @@
 
 .icon-linkedin:before {
   content: "\69";
+}
+
+.icon-skype:before {
+  content: "\e900";
 }
 
 /*================ Social share buttons ================*/
@@ -182,6 +186,14 @@
   background-color: #005582;
 }
 
+.share-skype {
+  background-color: #00aff0;
+}
+
+.share-skype:hover {
+  background-color: #008abd;
+}
+
 .share-count {
   position: relative;
   background-color: #fff;
@@ -301,4 +313,8 @@ a:hover .share-count:after {
 
 .social-sharing.is-clean .icon-linkedin {
   color: #0077b5;
+}
+
+.social-sharing.is-clean .icon-skype {
+  color: #00aff0;
 }
