@@ -28,7 +28,8 @@ CSbuttons.socialSharing = function () {
       $pinLink = $('.share-pinterest'),
       $googleLink = $('.share-google'),
       $redditLink = $('.share-reddit'),
-      $linkedinLink = $('.share-linkedin');
+      $linkedinLink = $('.share-linkedin'),
+      $skypeLink = $('.share-skype');
 
   if ( $fbLink.length ) {
     $.getJSON('https://graph.facebook.com/?id=' + permalink + '&callback=?')
@@ -96,6 +97,11 @@ CSbuttons.socialSharing = function () {
       });
   };
 
+  if ( $skypeLink.length ) {
+    // Can't currently get skype count with JS, so just pretend it loaded
+    $skypeLink.find('.share-count').addClass('is-loaded');
+  }
+
   // Share popups
   $shareLinks.on('click', function(e) {
     var el = $(this),
@@ -118,6 +124,10 @@ CSbuttons.socialSharing = function () {
         break;
       case 'share_reddit':
         popup = false;
+        break;
+      case 'share_skype':
+        w = 300;
+        h = 720;
         break;
     }
 
