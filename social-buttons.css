@@ -27,35 +27,35 @@
 }
 
 .icon-fancy:before {
-  content: "\46";
+  content: "a";
 }
 
 .icon-twitter:before {
-  content: "\54";
+  content: "b";
 }
 
 .icon-facebook:before {
-  content: "\66";
+  content: "c";
 }
 
 .icon-google:before {
-  content: "\67";
+  content: "d";
 }
 
 .icon-pinterest:before {
-  content: "\70";
+  content: "e";
 }
 
 .icon-reddit:before {
-  content: "\52";
+  content: "f";
 }
 
 .icon-linkedin:before {
-  content: "\69";
+  content: "g";
 }
 
 .icon-skype:before {
-  content: "\e900";
+  content: "h";
 }
 
 /*================ Social share buttons ================*/
