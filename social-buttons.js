@@ -46,17 +46,8 @@ CSbuttons.socialSharing = function () {
   };
 
   if ( $twitLink.length ) {
-    $.getJSON('https://cdn.api.twitter.com/1/urls/count.json?url=' + permalink + '&callback=?')
-      .done(function(data) {
-        if (data.count > 0) {
-          $twitLink.find('.share-count').text(data.count).addClass('is-loaded');
-        } else {
-          $twitLink.find('.share-count').remove();
-        }
-      })
-      .fail(function(data) {
-        $twitLink.find('.share-count').remove();
-      });
+    // Can't currently get Twitter count with JS, so just pretend it loaded
+    $twitLink.find('.share-count').addClass('is-loaded');
   };
 
   if ( $pinLink.length ) {
