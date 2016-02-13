@@ -32,3 +32,9 @@ Simple social sharing buttons with shared count ajax lookups.
 ```
 sass --watch social-buttons.scss:social-buttons.css
 ```
+
+### Twitter Count
+
+For those that want the Twitter count back (as it was removed from the Twitter API), please make sure to register your website at [New Share Counts](http://newsharecounts.com/) as this is the alternative that our buttons now use.
+
+Your Twitter count may continue where you left off or start from `0`. Please refer to the linked website for more details.
