@@ -46,7 +46,7 @@ CSbuttons.socialSharing = function () {
   };
 
   if ( $twitLink.length ) {
-    $.getJSON('https://cdn.api.twitter.com/1/urls/count.json?url=' + permalink + '&callback=?')
+    $.getJSON('http://public.newsharecounts.com/count.json?url=' + permalink + '&callback=?')
       .done(function(data) {
         if (data.count > 0) {
           $twitLink.find('.share-count').text(data.count).addClass('is-loaded');
