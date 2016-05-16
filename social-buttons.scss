@@ -50,7 +50,6 @@
 /*================ Social share buttons ================*/
 $shareButtonHeight: 22px;
 $shareButtonCleanHeight: 30px;
-$shareCountBg: #fff;
 $shareBorderColor: #ececec;
 
 .social-sharing {
@@ -188,62 +187,6 @@ $shareBorderColor: #ececec;
   }
 }
 
-.share-count {
-  position: relative;
-  background-color: $shareCountBg;
-  padding: 0 8px;
-  margin-right: -2px;
-  font-size: 14px;
-  line-height: $shareButtonHeight - 2;
-  color: #333;
-  border-radius: 0 2px 2px 0;
-  border: 1px solid $shareBorderColor;
-  opacity: 0;
-  @include transition(opacity 0.2s ease-in);
-
-  &.is-loaded {
-    opacity: 1;
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    margin-top: -6px;
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-right: 6px solid;
-  }
-
-  &:before {
-    left: -6px;
-    border-right-color: $shareBorderColor;
-  }
-
-  &:after {
-    left: -5px;
-    border-right-color: $shareCountBg;
-  }
-
-  a:hover & {
-    background-color: darken($shareCountBg, 4%);
-
-    &:after {
-      border-right-color: darken($shareCountBg, 4%);
-    }
-  }
-
-  .is-large & {
-    font-size: 18px;
-    padding: 0 14px;
-  }
-
-}
-
 /*================ Clean Buttons ================*/
 .social-sharing.is-clean {
   a {
@@ -263,21 +206,9 @@ $shareBorderColor: #ececec;
       background-color: $shareBorderColor;
     }
 
-    &:hover .share-count {
-      background-color: $shareCountBg;
-
-      &:after {
-        border-right-color: $shareCountBg;
-      }
-    }
-
     .share-title {
       font-weight: normal;
     }
-  }
-
-  .share-count {
-    top: -1px;
   }
 
   .icon-facebook {
