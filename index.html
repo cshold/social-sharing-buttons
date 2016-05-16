@@ -2,16 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>jQuery Social Sharing Buttons with Shared Count</title>
-  <meta name="description" content="jQuery social share buttons with shared count on GitHub.">
+  <title>jQuery Social Sharing Buttons</title>
+  <meta name="description" content="jQuery social share buttons on GitHub.">
   <meta name="author" content="Carson Shold">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="social share buttons, sass, jquery">
-  <meta name="og:description" content="jQuery social share buttons with shared count on GitHub.">
+  <meta name="og:description" content="jQuery social share buttons on GitHub.">
   <meta name="og:url" content="http://labs.carsonshold.com/social-sharing-buttons/">
   <meta name="og:image" content="http://labs.carsonshold.com/social-sharing-buttons/demo.png">
   <meta name="og:type" content="website">
-  <meta name="og:site_name" content="jQuery Social Sharing Buttons with Shared Count">
+  <meta name="og:site_name" content="jQuery Social Sharing Buttons">
   <link rel="stylesheet" href="http://labs.carsonshold.com/demos.css">
   <link rel="stylesheet" href="social-buttons.css">
 </head>
@@ -27,7 +27,6 @@
   <ul>
     <li>Icon font</li>
     <li>Ajax requests for number of times shared</li>
-    <li>Hide share count if 0</li>
     <li>Built with Sass, exported to CSS</li>
   </ul>
 
@@ -38,70 +37,10 @@
     <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
       <span class="icon icon-facebook" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- https://dev.twitter.com/docs/intents -->
-    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub&amp;" class="share-twitter">
-      <span class="icon icon-twitter" aria-hidden="true"></span>
-      <span class="share-title">Tweet</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!--
-      https://developers.pinterest.com/pin_it/
-      Pinterest get data from the same Open Graph meta tags Facebook uses
-    -->
-    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://labs.carsonshold.com/social-sharing-buttons&amp;media=http://labs.carsonshold.com/social-sharing-buttons/demo.png&amp;description=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-pinterest">
-      <span class="icon icon-pinterest" aria-hidden="true"></span>
-      <span class="share-title">Pin it</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!-- https://developers.google.com/+/web/share/ -->
-    <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
-      <!-- Cannot get Google+ share count with JS yet -->
-      <span class="icon icon-google" aria-hidden="true"></span>
-      <span class="share-count">+1</span>
-    </a>
-
-    <!-- http://fancy.com/help/button -->
-    <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL=http://labs.carsonshold.com/social-sharing-buttons&amp;Title=Tina%20the%20dachsund&amp;Category=Other&amp;ImageURL=http://distilleryimage3.ak.instagram.com/6477684ac48d11e19ab222000a1e8819_7.jpg" class="share-fancy">
-      <span class="icon icon-fancy" aria-hidden="true"></span>
-      <span class="share-title">Fancy</span>
-    </a>
-
-    <!-- https://www.reddit.com/buttons -->
-    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-reddit">
-      <span class="icon icon-reddit" aria-hidden="true"></span>
-      <span class="share-title">Reddit</span>
-    </a>
-
-    <!-- https://developer.linkedin.com/plugins/share -->
-    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-linkedin">
-      <span class="icon icon-linkedin" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!-- http://blogs.skype.com/2015/11/04/introducing-share-button-effortless-sharing-that-sparks-richer-conversations/ -->
-    <a target="_blank" href="https://web.skype.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&lang=en-us" class="share-skype">
-      <span class="icon icon-skype" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-    </a>
-
-  </div>
-
-  <div class="social-sharing" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
-
-    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
-    <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
-      <span class="icon icon-facebook" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-    </a>
-
-    <!-- https://dev.twitter.com/docs/intents -->
-    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub&amp;" class="share-twitter">
+    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20on%20GitHub&amp;" class="share-twitter">
       <span class="icon icon-twitter" aria-hidden="true"></span>
       <span class="share-title">Tweet</span>
     </a>
@@ -117,7 +56,6 @@
 
     <!-- https://developers.google.com/+/web/share/ -->
     <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
-      <!-- Cannot get Google+ share count with JS yet -->
       <span class="icon icon-google" aria-hidden="true"></span>
       <span class="share-title">+1</span>
     </a>
@@ -129,16 +67,15 @@
     </a>
 
     <!-- https://www.reddit.com/buttons -->
-    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-reddit">
+    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-reddit">
       <span class="icon icon-reddit" aria-hidden="true"></span>
       <span class="share-title">Reddit</span>
     </a>
 
     <!-- https://developer.linkedin.com/plugins/share -->
-    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-linkedin">
+    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-linkedin">
       <span class="icon icon-linkedin" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- http://blogs.skype.com/2015/11/04/introducing-share-button-effortless-sharing-that-sparks-richer-conversations/ -->
@@ -156,14 +93,12 @@
     <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
       <span class="icon icon-facebook" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- https://dev.twitter.com/docs/intents -->
-    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub&amp;" class="share-twitter">
+    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20on%20GitHub&amp;" class="share-twitter">
       <span class="icon icon-twitter" aria-hidden="true"></span>
       <span class="share-title">Tweet</span>
-      <span class="share-count">0</span>
     </a>
 
     <!--
@@ -173,14 +108,12 @@
     <a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://labs.carsonshold.com/social-sharing-buttons&amp;media=http://photos-c.ak.instagram.com/hphotos-ak-xfp1/10369404_682591538475746_1724734234_n.jpg&amp;description=Tina%20the%20dachsund" class="share-pinterest">
       <span class="icon icon-pinterest" aria-hidden="true"></span>
       <span class="share-title">Pin it</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- https://developers.google.com/+/web/share/ -->
     <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
-      <!-- Cannot get Google+ share count with JS yet -->
       <span class="icon icon-google" aria-hidden="true"></span>
-      <span class="share-count">+1</span>
+      <span class="share-title">+1</span>
     </a>
 
     <!-- http://fancy.com/help/button -->
@@ -190,16 +123,15 @@
     </a>
 
     <!-- https://www.reddit.com/buttons -->
-    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-reddit">
+    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-reddit">
       <span class="icon icon-reddit" aria-hidden="true"></span>
       <span class="share-title">Reddit</span>
     </a>
 
     <!-- https://developer.linkedin.com/plugins/share -->
-    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-linkedin">
+    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-linkedin">
       <span class="icon icon-linkedin" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- http://blogs.skype.com/2015/11/04/introducing-share-button-effortless-sharing-that-sparks-richer-conversations/ -->
@@ -217,70 +149,10 @@
     <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
       <span class="icon icon-facebook" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- https://dev.twitter.com/docs/intents -->
-    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub&amp;" class="share-twitter">
-      <span class="icon icon-twitter" aria-hidden="true"></span>
-      <span class="share-title">Tweet</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!--
-      https://developers.pinterest.com/pin_it/
-      Pinterest get data from the same Open Graph meta tags Facebook uses
-    -->
-    <a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://labs.carsonshold.com/social-sharing-buttons&amp;media=http://photos-c.ak.instagram.com/hphotos-ak-xfp1/10369404_682591538475746_1724734234_n.jpg&amp;description=Tina%20the%20dachsund" class="share-pinterest">
-      <span class="icon icon-pinterest" aria-hidden="true"></span>
-      <span class="share-title">Pin it</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!-- https://developers.google.com/+/web/share/ -->
-    <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
-      <!-- Cannot get Google+ share count with JS yet -->
-      <span class="icon icon-google" aria-hidden="true"></span>
-      <span class="share-count">+1</span>
-    </a>
-
-    <!-- http://fancy.com/help/button -->
-    <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL=http://labs.carsonshold.com/social-sharing-buttons&amp;Title=Tina%20the%20dachsund&amp;Category=Other&amp;ImageURL=http://distilleryimage3.ak.instagram.com/6477684ac48d11e19ab222000a1e8819_7.jpg" class="share-fancy">
-      <span class="icon icon-fancy" aria-hidden="true"></span>
-      <span class="share-title">Fancy</span>
-    </a>
-
-    <!-- https://www.reddit.com/buttons -->
-    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-reddit">
-      <span class="icon icon-reddit" aria-hidden="true"></span>
-      <span class="share-title">Reddit</span>
-    </a>
-
-    <!-- https://developer.linkedin.com/plugins/share -->
-    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-linkedin">
-      <span class="icon icon-linkedin" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-      <span class="share-count">0</span>
-    </a>
-
-    <!-- http://blogs.skype.com/2015/11/04/introducing-share-button-effortless-sharing-that-sparks-richer-conversations/ -->
-    <a target="_blank" href="https://web.skype.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&lang=en-us" class="share-skype">
-      <span class="icon icon-skype" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-    </a>
-
-  </div>
-
-  <div class="social-sharing is-clean" data-permalink="http://labs.carsonshold.com/social-sharing-buttons">
-
-    <!-- https://developers.facebook.com/docs/plugins/share-button/ -->
-    <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://labs.carsonshold.com/social-sharing-buttons" class="share-facebook">
-      <span class="icon icon-facebook" aria-hidden="true"></span>
-      <span class="share-title">Share</span>
-    </a>
-
-    <!-- https://dev.twitter.com/docs/intents -->
-    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub&amp;" class="share-twitter">
+    <a target="_blank" href="http://twitter.com/share?url=http://labs.carsonshold.com/social-sharing-buttons&amp;text=jQuery%20social%20media%20buttons%20on%20GitHub&amp;" class="share-twitter">
       <span class="icon icon-twitter" aria-hidden="true"></span>
       <span class="share-title">Tweet</span>
     </a>
@@ -296,7 +168,6 @@
 
     <!-- https://developers.google.com/+/web/share/ -->
     <a target="_blank" href="http://plus.google.com/share?url=http://labs.carsonshold.com/social-sharing-buttons" class="share-google">
-      <!-- Cannot get Google+ share count with JS yet -->
       <span class="icon icon-google" aria-hidden="true"></span>
       <span class="share-title">+1</span>
     </a>
@@ -308,16 +179,15 @@
     </a>
 
     <!-- https://www.reddit.com/buttons -->
-    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-reddit">
+    <a target="_blank" href="http://www.reddit.com/submit?url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-reddit">
       <span class="icon icon-reddit" aria-hidden="true"></span>
       <span class="share-title">Reddit</span>
     </a>
 
     <!-- https://developer.linkedin.com/plugins/share -->
-    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20with%20share%20counts%20on%20GitHub" class="share-linkedin">
+    <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://labs.carsonshold.com/social-sharing-buttons&title=jQuery%20social%20media%20buttons%20on%20GitHub" class="share-linkedin">
       <span class="icon icon-linkedin" aria-hidden="true"></span>
       <span class="share-title">Share</span>
-      <span class="share-count">0</span>
     </a>
 
     <!-- http://blogs.skype.com/2015/11/04/introducing-share-button-effortless-sharing-that-sparks-richer-conversations/ -->
@@ -327,13 +197,6 @@
     </a>
 
   </div>
-
-  <h2>Limitations</h2>
-  <ul>
-    <li>Google+ doesn't let you get the number of shared with JavaScript. <a href="http://www.aljtmedia.com/blog/getting-your-social-share-counts-with-php/" target="_blank">Try PHP</a>.</li>
-    <li>Fancy, Reddit, and Skype do not have a way to get number of shares</li>
-    <li>Only meant for one set of share buttons per page</li>
-  </ul>
 
   <footer class="demo-footer">
     <p>Author: Carson Shold | <a href="https://twitter.com/cshold" title="Carson Shold on Twitter">@cshold</a></p>
